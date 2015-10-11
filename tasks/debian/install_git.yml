@@ -1,0 +1,8 @@
+---
+- name: Install Git on Debian based
+  sudo: yes
+  apt:
+    name: "{{ git_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"

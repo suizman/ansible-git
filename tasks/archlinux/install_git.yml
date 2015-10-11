@@ -1,0 +1,8 @@
+---
+- name: Install Git on Arch Linux based
+  sudo: yes
+  pacman:
+    name: "{{ git_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Archlinux"

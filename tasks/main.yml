@@ -1,0 +1,12 @@
+---
+### Archlinux
+- name: Install Git
+  include: archlinux/install_git.yml
+
+### Debian
+- name: Install Git
+  include: debian/install_git.yml
+
+### Red Hat
+- name: Install Git
+  include: redhat/install_git.yml

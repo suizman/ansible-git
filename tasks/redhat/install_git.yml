@@ -1,0 +1,8 @@
+---
+- name: Install Git on Red Hat based
+  sudo: yes
+  yum:
+    name: "{{ git_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "CentOS" or ansible_os_family == "Fedora" or ansible_os_family == "SuSe"
